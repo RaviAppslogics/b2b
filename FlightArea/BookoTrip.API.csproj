@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{568BCDEC-99BC-4FF0-B684-10A789FDAC54}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BookoTrip.API</RootNamespace>
+    <AssemblyName>BookoTrip.API</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BookoTrip.com\Required_dlls\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.WebApi.MessageHandlers.Compression">
+      <HintPath>..\..\bookotrip_in\BookOtrip_in\Required_dlls\Microsoft.AspNet.WebApi.MessageHandlers.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorHtmlMinifier.Mvc5">
+      <HintPath>..\packages\RazorHtmlMinifier.Mvc5.1.2.0\lib\net45\RazorHtmlMinifier.Mvc5.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\..\bookotrip_in\BookOtrip_in\Required_dlls\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BookoTrip.com\Required_dlls\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dlls\bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FlightController.cs" />
+    <Compile Include="Controllers\HotelController.cs" />
+    <Compile Include="Controllers\PostInDBController.cs" />
+    <Compile Include="Controllers\TBT_VacationController.cs" />
+    <Compile Include="Controllers\VacationsController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataReaderExtension.cs" />
+    <Compile Include="FlightClasses\flight_add_trav_info.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\RequestResponseLogHandler.cs" />
+    <Compile Include="HotelClasses\DataUtility_hb.cs" />
+    <Compile Include="HotelClasses\Hotel-booking.cs" />
+    <Compile Include="HotelClasses\Hotel-checkrates.cs" />
+    <Compile Include="HotelClasses\Hotel-listing.cs" />
+    <Compile Include="HotelClasses\Hotel.cs" />
+    <Compile Include="HotelClasses\oHotel.cs" />
+    <Compile Include="Mail.cs" />
+    <Compile Include="MailBodyGeneration.cs" />
+    <Compile Include="mailer.cs" />
+    <Compile Include="MemberAreaClasses\AppDealsList.cs" />
+    <Compile Include="MemberAreaClasses\PushNotificationApp.cs" />
+    <Compile Include="MemberAreaClasses\AppOfferList.cs" />
+    <Compile Include="MemberAreaClasses\AirportList.cs" />
+    <Compile Include="TBT_Vacation\tbt_vacation.cs" />
+    <Compile Include="MemberAreaClasses\ContactUs.cs" />
+    <Compile Include="MemberAreaClasses\DataUtility_member.cs" />
+    <Compile Include="MemberAreaClasses\EditProfile.cs" />
+    <Compile Include="MemberAreaClasses\InsertAppID.cs" />
+    <Compile Include="MemberAreaClasses\MemberAddTravInfo.cs" />
+    <Compile Include="MemberAreaClasses\MemberLogin.cs" />
+    <Compile Include="MemberAreaClasses\MemberSignUp.cs" />
+    <Compile Include="MemberAreaClasses\PromoCode.cs" />
+    <Compile Include="PostInDBClasses\CreateLeadbyCRM.cs" />
+    <Compile Include="PostInDBClasses\Flight_Booking_Add_Trav_Info.cs" />
+    <Compile Include="PostInDBClasses\Flight_Booking_Payment_Details.cs" />
+    <Compile Include="PostInDBClasses\HDFC_PG_Req_Res_Insert.cs" />
+    <Compile Include="PostInDBClasses\Flight_Search_Details.cs" />
+    <Compile Include="PostInDBClasses\Flight_Select_Recommendations.cs" />
+    <Compile Include="ProfileRewardClasses\Booking_Status_Details.cs" />
+    <Compile Include="ProfileRewardClasses\E_Wallet_Apply.cs" />
+    <Compile Include="ProfileRewardClasses\FareTracker.cs" />
+    <Compile Include="ProfileRewardClasses\RewardPoints.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RouteDataMapping.cs" />
+    <Compile Include="VacationClasses\DB_Relation_Vacation.cs" />
+    <Compile Include="VacationClasses\VacationModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="api_dll_required\Antlr3.Runtime.dll" />
+    <Content Include="api_dll_required\BookoTrip.API.dll" />
+    <Content Include="api_dll_required\BookoTrip.CommonUtility.dll" />
+    <Content Include="api_dll_required\BookoTrip.Core.dll" />
+    <Content Include="api_dll_required\BookoTrip.Data.dll" />
+    <Content Include="api_dll_required\DataAnnotationsExtensions.ClientValidation.dll" />
+    <Content Include="api_dll_required\DataAnnotationsExtensions.dll" />
+    <Content Include="api_dll_required\Elmah.dll" />
+    <Content Include="api_dll_required\EntityFramework.dll" />
+    <Content Include="api_dll_required\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="api_dll_required\Microsoft.AspNet.Identity.EntityFramework.dll" />
+    <Content Include="api_dll_required\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="api_dll_required\Microsoft.AspNet.WebApi.MessageHandlers.Compression.dll" />
+    <Content Include="api_dll_required\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="api_dll_required\Newtonsoft.Json.dll" />
+    <Content Include="api_dll_required\RazorHtmlMinifier.Mvc5.dll" />
+    <Content Include="api_dll_required\System.Net.Http.Extensions.dll" />
+    <Content Include="api_dll_required\System.Net.Http.Formatting.dll" />
+    <Content Include="api_dll_required\System.Net.Http.Primitives.dll" />
+    <Content Include="api_dll_required\System.Web.Helpers.dll" />
+    <Content Include="api_dll_required\System.Web.Http.dll" />
+    <Content Include="api_dll_required\System.Web.Http.WebHost.dll" />
+    <Content Include="api_dll_required\System.Web.Mvc.dll" />
+    <Content Include="api_dll_required\System.Web.Optimization.dll" />
+    <Content Include="api_dll_required\System.Web.Razor.dll" />
+    <Content Include="api_dll_required\System.Web.WebPages.Deployment.dll" />
+    <Content Include="api_dll_required\System.Web.WebPages.dll" />
+    <Content Include="api_dll_required\System.Web.WebPages.Razor.dll" />
+    <Content Include="api_dll_required\WebActivator.dll" />
+    <Content Include="api_dll_required\WebGrease.dll" />
+    <Content Include="Content\images\mailer-template\bot-us-num.jpg" />
+    <Content Include="Content\images\mailer-template\header.png" />
+    <Content Include="Content\images\mailer-template\m-facebook.jpg" />
+    <Content Include="Content\images\mailer-template\m-instagram.jpg" />
+    <Content Include="Content\images\mailer-template\m-linkedin.jpg" />
+    <Content Include="Content\images\mailer-template\m-twitter.jpg" />
+    <Content Include="Content\images\mailer-template\m-youtube.jpg" />
+    <Content Include="Content\images\mailer-template\travel-for-less.jpg" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\published_hotel_api.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BookoTrip.CommonUtility\BookoTrip.CommonUtility.csproj">
+      <Project>{1a184121-773b-4258-8e81-0bb9c7752abd}</Project>
+      <Name>BookoTrip.CommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookoTrip.Data\BookoTrip.Data.csproj">
+      <Project>{f28e7909-801e-4a32-b574-b6845fc03d32}</Project>
+      <Name>BookoTrip.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49212</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49212/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
